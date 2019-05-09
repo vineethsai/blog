@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}Vineeth's Blog{% endblock %}
+
+{% block content %}
+
+
+{% if posts %}
+<h1 class="mt-4">All Posts</h1>
+<ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-25">
+                {% for post in posts %}
+                {% if post.is_published %}
+                <!-- Title -->
+                <h2 class="mt-4">{{post.title | title}}</h2>
+                <!-- Author -->
+                <p class="lead">
+                    by
+                    <a href="#">{{post.author | title}}</a>
+                </p>
+                <hr>
+                <!-- Date/Time -->
+                <p>{{post.created_date}}</p>
+                <hr>
+                <!-- Preview Image -->
+                <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+                <hr>
+                <!-- Post Content -->
+                <p>{{post.text}}</p>
+                <hr>
+                <p class="float-right">View full post <a href="#">here</a></p><br>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</ul>
+{% else %}
+<p>There are no posts.</p>
+{% endif %}
+
+{% endblock %}
