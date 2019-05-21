@@ -33,12 +33,12 @@ def posts(request):
         return HttpResponse("method not allowed", status=405)
 
 
-def specific_post(request, post_id):
-    if request.method == "GET":
-        post = Post.objects.get(id=post_id)
-        # TODO: send post id ot template, diplay post
-    # TODO: edit post using PATCH
-    # TODO: delete specific post
-    # TODO: create templates for spefici post
-    # TODO: Complete contact, Login and register page
-    # TODO: add more things to do
+# def specific_post(request, post_id):
+#     if request.method == "GET":
+#         post = Post.objects.get(id=post_id)
+#         # TODO: send post id ot template, diplay post
+#     # TODO: edit post using PATCH
+#     # TODO: delete specific post
+#     # TODO: create templates for spefici post
+#     # TODO: Complete contact, Login and register page
+#     # TODO: add more things to do
