@@ -1,9 +1,0 @@
-{% extends 'base.html' %}
-{% load crispy_forms_tags %}
-{% block title %} New post {% endblock %}
-{% block content %}
-    <form action="/blog/posts" method="post">{% csrf_token %}
-        {{ form|crispy }}
-        <br><button type="submit" value="submit" class="btn btn-success">Submit</button>
-    </form>
-{% endblock %}

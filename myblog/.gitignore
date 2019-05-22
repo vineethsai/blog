@@ -6,3 +6,4 @@ Lib/
 .idea/workspace.xml
 ../blogenv/
 blogenv/
+venv/

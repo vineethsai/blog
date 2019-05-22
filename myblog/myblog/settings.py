@@ -28,6 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
+    "https://vineethblog.azurewebsites.net",
+    "vineethblog.azurewebsites.net"
 
 ]
 
@@ -40,14 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'blog',
-    'crispy_forms',
-    'django_extensions',
-    'bootstrap4'
+    'django.contrib.staticfiles'
 ]
-
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TIME_ZONE = 'America/Los_Angeles'
 
@@ -58,8 +54,10 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware'
 ]
+
+
 
 ROOT_URLCONF = 'myblog.urls'
 
@@ -125,9 +123,9 @@ USE_L10N = True
 
 USE_TZ = True
 
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = False
-SECURE_SSL_REDIRECT = False
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = False
+# SECURE_SSL_REDIRECT = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
